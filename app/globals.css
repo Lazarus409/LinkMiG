@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-white antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-yellow-400 text-black;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-yellow-400 ring-offset-2 ring-offset-ink-950;
+  }
+
+  /* Native date picker icon is dark by default; invert it on dark fields */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-yellow-400;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-yellow-400/70;
+  }
+
+  .heading-xl {
+    @apply font-display text-4xl font-bold leading-[1.08] tracking-[-0.022em] sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-lg {
+    @apply font-display text-3xl font-bold leading-[1.15] tracking-[-0.02em] sm:text-4xl lg:text-[2.6rem];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-yellow-400 text-black shadow-[0_10px_30px_-10px_rgba(250,204,21,0.6)] hover:-translate-y-0.5 hover:bg-yellow-300;
+  }
+
+  .btn-secondary {
+    @apply btn border border-white/15 bg-white/5 text-white backdrop-blur hover:border-white/30 hover:bg-white/10;
+  }
+
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-black hover:-translate-y-0.5 hover:bg-[#3be27a];
+  }
+
+  .card {
+    @apply rounded-3xl border border-white/10 bg-white/[0.03];
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3 text-sm text-white transition placeholder:text-white/35 hover:border-white/20 focus:border-yellow-400/70 focus:outline-none focus:ring-2 focus:ring-yellow-400/20;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-white/50;
+  }
+
+  .icon-badge {
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-400 ring-1 ring-inset ring-yellow-400/20;
+  }
+}
+
+/* Swiper theme */
+.swiper {
+  --swiper-theme-color: #facc15;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-navigation-size: 18px;
+  padding-bottom: 3rem !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply !h-11 !w-11 rounded-full border border-white/10 bg-black/60 !text-white backdrop-blur transition hover:!bg-yellow-400 hover:!text-black;
+  top: calc(50% - 1.5rem) !important;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  @apply !h-4 !w-4;
+}
+
+.swiper-button-disabled {
+  @apply !opacity-0;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
