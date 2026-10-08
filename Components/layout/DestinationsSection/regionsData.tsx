@@ -70,7 +70,12 @@ export const regionsData = {
       },
       {
         name: "W.E.B. Du Bois Centre",
-        image: "",
+        image: "/sites/du-bois-centre.jpg",
+        credit: {
+          author: "Unknown author (W. E. B. Du Bois Papers, UMass Amherst)",
+          license: "Public domain",
+          url: "https://commons.wikimedia.org/wiki/File:W._E._B._Du_Bois_on_his_95th_birthday_toasting_Kwame_Nkrumah_and_Madame_Nkrumah,_95th_Birthday_celebration,_Accra,_Ghana,_February_23,_1963.jpg",
+        },
         description:
           "Former home and resting place of the Pan-African scholar W.E.B. Du Bois.",
       },
