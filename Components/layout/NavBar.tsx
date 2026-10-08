@@ -37,11 +37,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menus whenever the route changes
-  useEffect(() => {
+  // Close menus whenever the route changes (adjusting state during render
+  // avoids an extra effect-triggered render)
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setMobileOpen(false);
     setServicesOpen(false);
-  }, [pathname]);
+  }
 
   // Lock page scroll behind the mobile menu
   useEffect(() => {
