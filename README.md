@@ -23,10 +23,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 **Email is currently paused** (`emailEnabled: false` in `lib/site.ts`):
 
-- The contact form validates the details, then opens WhatsApp with the booking pre-filled to `+233 56 098 5509`. The visitor taps Send.
+- The contact form validates the details, then opens WhatsApp with the booking pre-filled to `+233 54 123 6324`. The visitor taps Send.
 - The newsletter section is hidden.
 
-To turn email back on: fill in `.env.local` from `.env.example` (SMTP), then set `emailEnabled: true`. The form then emails bookings to `info@linkmig.com` via `POST /api/contact` and offers WhatsApp as a follow-up, and the newsletter reappears.
+To turn email back on: fill in `.env.local` from `.env.example` (SMTP), then set `emailEnabled: true`. The form then emails bookings to `info@linkmigtravel.com` via `POST /api/contact` and offers WhatsApp as a follow-up, and the newsletter reappears.
 
 Change contact details in `lib/site.ts`. Fill in `site.socials` to show the Facebook/Instagram/Twitter icons (they're hidden while empty).
 

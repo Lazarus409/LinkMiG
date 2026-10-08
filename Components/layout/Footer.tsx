@@ -64,6 +64,11 @@ export default function Footer() {
             </a>
           </li>
           <li>
+            <a href={site.officePhoneHref} className="flex items-center gap-3 transition hover:text-yellow-400">
+              <Phone size={16} className="shrink-0 text-yellow-400" /> {site.officePhoneDisplay} (Office)
+            </a>
+          </li>
+          <li>
             <a
               href={`mailto:${site.email}`}
               className="flex items-center gap-3 transition hover:text-yellow-400"

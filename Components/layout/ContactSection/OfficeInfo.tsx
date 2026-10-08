@@ -47,8 +47,13 @@ export default function OfficeInfo() {
             <MapPin size={18} className="shrink-0 text-yellow-400" /> {site.officeCity}, Ghana
           </li>
           <li>
+            <a href={site.officePhoneHref} className="flex items-center gap-3 transition hover:text-yellow-400">
+              <Phone size={18} className="shrink-0 text-yellow-400" /> {site.officePhoneDisplay} (Office)
+            </a>
+          </li>
+          <li>
             <a href={site.phoneHref} className="flex items-center gap-3 transition hover:text-yellow-400">
-              <Phone size={18} className="shrink-0 text-yellow-400" /> {site.phoneDisplay}
+              <Phone size={18} className="shrink-0 text-yellow-400" /> {site.phoneDisplay} (Phone/WhatsApp)
             </a>
           </li>
           <li>

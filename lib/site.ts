@@ -3,11 +3,14 @@ import { servicesData } from "./services-data";
 // Single source of truth for business contact details shown across the site.
 export const site = {
   name: "Link MiG Travel & Tour",
-  email: "info@linkmig.com",
-  phoneDisplay: "+233 56 098 5509",
-  phoneHref: "tel:+233560985509",
+  email: "info@linkmigtravel.com",
+  // Mobile line, also used for WhatsApp
+  phoneDisplay: "+233 54 123 6324",
+  phoneHref: "tel:+233541236324",
+  officePhoneDisplay: "0302 450 189",
+  officePhoneHref: "tel:+233302450189",
   // International format, digits only (used by wa.me links)
-  whatsappNumber: "233560985509",
+  whatsappNumber: "233541236324",
   officeCity: "Accra",
   // Booking/newsletter emails are paused: the contact form goes straight to
   // WhatsApp and the newsletter is hidden. Set to true once SMTP is configured.
